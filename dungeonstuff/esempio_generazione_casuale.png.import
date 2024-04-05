@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crg5kva4tmrf3"
-path="res://.godot/imported/esempio_generazione_casuale.png-aa08b22b16b5d63b74b6aef602e6a718.ctex"
+path="res://.godot/imported/esempio_generazione_casuale.png-98ce8aae5fc1bbf25c6f91e979942807.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://esempio_generazione_casuale.png"
-dest_files=["res://.godot/imported/esempio_generazione_casuale.png-aa08b22b16b5d63b74b6aef602e6a718.ctex"]
+source_file="res://dungeonstuff/esempio_generazione_casuale.png"
+dest_files=["res://.godot/imported/esempio_generazione_casuale.png-98ce8aae5fc1bbf25c6f91e979942807.ctex"]
 
 [params]
 

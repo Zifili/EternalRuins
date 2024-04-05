@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bwwa1wpbjhhxl"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_0jaxh"]
-[ext_resource type="PackedScene" uid="uid://c4srmaf2y7b5s" path="res://playerFPS.tscn" id="1_qfdog"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_0jaxh"]
+[ext_resource type="PackedScene" uid="uid://c4srmaf2y7b5s" path="res://scenes/playerFPS.tscn" id="1_qfdog"]
 [ext_resource type="MeshLibrary" uid="uid://svocke5bx6ek" path="res://dungeonstuff/tiles.tres" id="3_5hvgb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nx8b7"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c4srmaf2y7b5s"]
 
-[ext_resource type="Script" path="res://playerFPS.gd" id="1_ybsga"]
+[ext_resource type="Script" path="res://scripts/playerFPS.gd" id="1_ybsga"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ewmv5"]
 
