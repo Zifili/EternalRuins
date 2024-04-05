@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=3 uid="uid://bwwa1wpbjhhxl"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_0jaxh"]
+[ext_resource type="PackedScene" uid="uid://c4srmaf2y7b5s" path="res://playerFPS.tscn" id="1_qfdog"]
+[ext_resource type="MeshLibrary" uid="uid://svocke5bx6ek" path="res://dungeonstuff/tiles.tres" id="3_5hvgb"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nx8b7"]
+sky_top_color = Color(0.482353, 0.482353, 0.482353, 1)
+sky_horizon_color = Color(0.670588, 0.662838, 0.653838, 1)
+ground_horizon_color = Color(0.670588, 0.662838, 0.653838, 1)
+
+[sub_resource type="Sky" id="Sky_1anf6"]
+sky_material = SubResource("ProceduralSkyMaterial_nx8b7")
+
+[sub_resource type="Environment" id="Environment_62bwe"]
+background_mode = 2
+sky = SubResource("Sky_1anf6")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_afdbt"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kqgeq"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3h8bn"]
+material = SubResource("StandardMaterial3D_kqgeq")
+size = Vector3(100, 1, 100)
+
+[node name="main" type="Node3D"]
+script = ExtResource("1_0jaxh")
+max_size = Vector3i(10, 0, 10)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_62bwe")
+
+[node name="ground" type="StaticBody3D" parent="."]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground"]
+visible = false
+shape = SubResource("BoxShape3D_afdbt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ground/CollisionShape3D"]
+visible = false
+mesh = SubResource("BoxMesh_3h8bn")
+skeleton = NodePath("../..")
+
+[node name="Player" parent="." instance=ExtResource("1_qfdog")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.125202, 2.40441, -3.30614)
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("3_5hvgb")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(0, 0, 0, 0, 9, 0, 9, 0, 0, 0, 1, 0, 1, 0, 0, 1, 9, 0, 9, 1, 0, 0, 2, 0, 2, 0, 0, 2, 9, 0, 9, 2, 0, 0, 3, 0, 3, 0, 0, 3, 9, 0, 9, 3, 0, 0, 4, 0, 4, 0, 0, 4, 9, 0, 9, 4, 0, 0, 5, 0, 5, 0, 0, 5, 9, 0, 9, 5, 0, 0, 6, 0, 6, 0, 0, 6, 9, 0, 9, 6, 0, 0, 7, 0, 7, 0, 0, 7, 9, 0, 9, 7, 0, 0, 8, 0, 8, 0, 0, 8, 9, 0, 9, 8, 0, 9, 9, 0, 1, 4, 2, 2, 7, 2, 6, 5, 2)
+}

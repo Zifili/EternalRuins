@@ -1,0 +1,53 @@
+[gd_scene load_steps=10 format=3 uid="uid://d05jjujy76g6q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t5qgs"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c7w6j"]
+material = SubResource("StandardMaterial3D_t5qgs")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_38v3b"]
+points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8c1fp"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a3ffj"]
+material = SubResource("StandardMaterial3D_8c1fp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e0m35"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_b0lhe"]
+material = SubResource("StandardMaterial3D_e0m35")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r5d8j"]
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8y25l"]
+material = SubResource("StandardMaterial3D_r5d8j")
+
+[node name="Tiles" type="Node3D"]
+
+[node name="cube1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51636, 0, 0)
+mesh = SubResource("BoxMesh_c7w6j")
+
+[node name="cube" type="StaticBody3D" parent="cube1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51636, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cube1/cube"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51636, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_38v3b")
+
+[node name="cube2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.873258, 0, 0)
+mesh = SubResource("BoxMesh_a3ffj")
+
+[node name="cube3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.783255, 0, 0)
+mesh = SubResource("BoxMesh_b0lhe")
+
+[node name="cube4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.55159, 0, 0)
+mesh = SubResource("BoxMesh_8y25l")
