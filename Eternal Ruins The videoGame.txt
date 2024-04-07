@@ -1,0 +1,27 @@
+Eternal Ruins: The videoGame
+
+Sounds pretty cool uh?
+
+Was thinking about making it in Godot, as it is the engine i've worked the most with.
+
+Super cool ideas but i think the 2 main categories this game might fall into are:
+
+- rogue-lite
+- action-adventure(zelda style), open world and survival
+
+This definitely has to be a 3d game, even though the perspective might change based on the genre(isometric/3rd person);the demons and the ruins are really oppressive and scary(sorry I don't have better words :P), the camera plays a fundamental role in frightening you while being chased or while hiding.
+First person would be perfect for the horrorific part but not for the rest of the gameplay, I think.
+
+Would be cool to find a way to implement despair and hallucinations in the gameplay(not just as status effects but also as something tangible).
+
+Of course the ruins are ever-changing,never the same, thus the world is procedural and it shapes itself everytime based on the player's current position.
+
+Any suggestion is higly appreciated. I haven't started anything for the moment, I'm just gathering ideas and making a plan. They told me someone already said they wanted to make a videogame so if you already have something to work on, I would love to help you out.
+
+
+Game Concepts and Ideas so Far:
+- Infinite dungeon that changes everytime the player closes and re-opens the game
+- What if during the night periods there’s a rare chance firefly like creatures form paths that show wanderers to treasure rooms, that have rarer loot than if u found them during the day periods, which encourages the wanderer to keep exploring during the night periods ( and Ofc it being night u would have less visibility making it more dangerous) risk for reward - idea of **boya_zz**
+- different day/night cycle in every room
+- different narratives based on the path you choose, pretty much like rainworld does
+- you have a lantern alimented by your vital strenght, replenished by eating and spleeping, if the lantern fades the game becomes harder
