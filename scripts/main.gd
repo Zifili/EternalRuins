@@ -31,6 +31,8 @@ var room_tiles : Array[PackedVector3Array] = []
 var room_positions : PackedVector3Array = []
 
 func _ready():
+	var start_seed :String = str(randi())
+	set_seed(start_seed)
 	generate()
 
 func visualize_border():
